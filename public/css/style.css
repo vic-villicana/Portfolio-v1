@@ -1,0 +1,255 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+html{
+  font-family: 'Exo 2', sans-serif;
+  font-size:16px;
+  text-rendering: optimizeLegibility;
+  background:rgb(59, 65, 75);
+  font-weight:400;
+}
+
+body{
+  max-width:1920px;
+  margin:0 auto;
+}
+
+
+h1{
+  color:aliceblue;
+  font-size:1.5rem;
+}
+
+/*---buttons---*/
+.btn{
+  display: inline-block;
+  background:#B3001B;
+  padding:.50em 1em;
+  margin-top:2em;
+  border-radius:4px;
+}
+
+.btn a{
+  text-decoration: none;
+  color: white;
+}
+
+/*----*/
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:100%;
+  padding:1.5em 2em;
+  
+}
+
+.navbar a{
+  color:#5CAB7D;
+  text-decoration: none;
+  padding:0 2em;
+}
+
+.logo{
+  color: #B3001B;
+  font-family:'Sedgwick Ave Display', cursive;
+  font-size:1.5rem;
+}
+
+.header{
+  position:relative;
+  height:100vh;
+  background:#3F4B3B;
+}
+
+.hero-box{
+  position:absolute;
+  width:auto;
+  padding:1em;
+  text-align:center;
+  transform: translate(-50%, -50%);
+  top:50%;
+  left:50%;
+  display:inline-block;
+  background: black;
+}
+
+.pip{
+  position:relative;
+  background: url(/img/city-buildings-and-trees-during-golden-hour.jpg);
+  background-position:center;
+  background-size:cover;
+  width:75%;
+  height:75%;
+  margin:0 auto;
+  top:5%;
+}
+
+.hero-box p{
+  color: #4ADBC8;
+  margin-top:.25em;
+}
+
+/*-----bio section----*/
+
+.about-me{
+  position:relative;
+  display:flex;
+  flex-direction:row;
+  height:100%;
+  width:100%;
+}
+
+.bio{
+  max-width:60%;
+  background:linear-gradient(#3F4B3B, rgb(59, 65, 75));
+}
+
+.bio-square{
+  max-width:75%;
+  margin: 10em auto 13em auto;
+  
+}
+
+.bio-square h2{
+  padding-bottom:.50em;
+  color:#4ADBC8;
+
+}
+
+.bio-square p{
+  color: #5CAB7D;
+}
+
+.specialty{
+  margin-top:2em;
+}
+
+.picture{
+  background:url(/img/black-iphone-7.jpg);
+  background-position:center;
+  background-size:cover;
+  width:40%;
+  height: auto;
+}
+
+.skill-section{
+  background:rgb(59, 65, 75);
+}
+
+.skills{
+  display:block;
+  position: relative;
+  background:url(/img/red-lights-in-line-on-black-surface.jpg);
+  background-position:center;
+  background-size:cover;
+  height:40em;
+  width:100%;
+  
+  margin-top:10em;
+}
+
+.skills-menu{
+  display:inline-block;
+  background: black;
+  height:auto;
+  position:absolute;
+  width:25em;
+  padding:.75em 1em;
+  top:-15%;
+  left:15%;
+}
+
+.skills-menu h3{
+  color:#4ADBC8;
+  padding:.5em 0;
+}
+
+.skills-menu p{
+  color:#4ADBC8;
+  
+}
+.list li{
+  list-style:none;
+  padding:.5em 0;
+  color: white;
+}
+
+.list{
+  padding-bottom:1.5em;
+}
+
+/*---projjects section---*/
+
+.projects{
+  display:flex;
+  position:relative;
+  height:auto;
+  padding:5em 6em;
+}
+
+.oneq{
+  background:url(/img/black-samsung-tablet-computer.jpg);
+  background-position:center;
+  background-size:cover;
+  width:45%;
+  height:auto;
+  
+  
+}
+
+.pro{
+  width:55%;
+}
+
+/*---cnotact section----*/
+
+.contact{
+  padding:5em 8em;
+}
+
+.contact-box{
+  position:relative;
+  display:flex;
+  border:2px solid #B3001B;
+}
+
+.contact-box .bio-square{
+  padding:0 4em;
+}
+
+.contact-form{
+  width:65%;
+  display:flex;
+  justify-content: center;
+ 
+}
+
+.contact-form form{
+  position:relative;
+  margin: 10em auto 13em auto;
+  display:inline-block;
+}
+
+.contact-form input{
+  margin-right:1em;
+  padding:.5em;
+}
+
+#submit{
+  border:none;
+  color:white;
+  padding:1em;
+}
+
+
+/*---slider--*//*---slider--*/
+/*---slider--*//*---slider--*/
+/*---slider--*//*---slider--*/
+
+
+
