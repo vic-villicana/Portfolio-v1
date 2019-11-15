@@ -259,6 +259,7 @@ h1{
   position:relative;
   height:80vh;
   padding-top: 7em;
+  
 }
 
 
@@ -321,26 +322,50 @@ h1{
   width:100%;
   
   display:flex;
-  transition:all .5 ease;
+  transition:all .6s ease;
 }
 
 .heading-slide{
   min-width:1250px;
   z-index: 3;
+  padding:1em;
+}
+
+.heading-slide h1{
+  color:#4ADBC8;
+  font-size:2em;
 }
 
 .slide-control{
   z-index: 4;
-  width:auto;
+  min-width:1000px;
+  height: 80vh;
   position:absolute;
-  transform: translate(-50%, -50%);
-  top:65%;
-  right:25%;
+  justify-content: flex-end;
+  right:15%;
   display:flex;
+  margin:0 auto;
+  align-items:center;
 }
 
+#prev{
+  cursor: pointer;
+}
+
+#next{
+  cursor: pointer;
+}
+
+button{
+  color:whitesmoke;
+  background:none;
+  padding:15px;
+  border-radius:50%;
+  margin:.5em;
+  font-size:15px;
+}
 .slide-container{
-  width:30em;
+  width:35em;
   padding-right: 2em;
   position: relative;
   left:50%;
@@ -354,7 +379,7 @@ h1{
   background:black;
   background-size:cover;
   background-position:center;
-  width:30em;
+  width:35em;
   height:100%;
 }
 
@@ -362,7 +387,7 @@ h1{
   background:rgb(219, 219, 219);
   background-size:cover;
   background-position:center;
-  width:30em;
+  width:35em;
   height:100%;
 }
 
@@ -370,7 +395,7 @@ h1{
   background:rgb(216, 66, 66);
   background-size:cover;
   background-position:center;
-  width:30em;
+  width:35em;
   height:100%;
 }
 
