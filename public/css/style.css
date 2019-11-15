@@ -18,18 +18,17 @@ body{
 }
 
 
-h1{
-  color:aliceblue;
-  font-size:1.5rem;
-}
-
 /*---buttons---*/
 .btn{
   display: inline-block;
   background:#B3001B;
   padding:.50em 1em;
-  margin-top:2em;
+  margin-top:1.5em;
   border-radius:4px;
+}
+
+.proj{
+  background:rgb(29, 29, 29);
 }
 
 .btn a{
@@ -76,6 +75,11 @@ h1{
   left:50%;
   display:inline-block;
   background: black;
+}
+
+.hero-box h1{
+  color: aliceblue;  
+  font-size: 1.5rem;
 }
 
 .pip{
@@ -257,7 +261,7 @@ h1{
 /*---slider--*//*---slider--*/
 .slider-section{
   position:relative;
-  height:80vh;
+  height:100%;
   padding-top: 7em;
   
 }
@@ -265,7 +269,7 @@ h1{
 
 .text-slider-wrapper{
   width:1250px;
-  height:80vh;
+  height:70vh;
   margin: 0 auto;
   overflow:hidden;
 }
@@ -339,7 +343,7 @@ h1{
 .slide-control{
   z-index: 4;
   min-width:1000px;
-  height: 80vh;
+  height: 70vh;
   position:absolute;
   justify-content: flex-end;
   right:15%;
@@ -397,5 +401,77 @@ button{
   background-position:center;
   width:35em;
   height:100%;
+}
+
+/*--- portfolio ---*/
+.reach-me{
+  position:relative;
+  height:100%;
+  margin-bottom:5em;
+}
+
+
+.title{
+  max-width:1250px;
+  margin: 2em auto;
+  color:#4ADBC8;
+}
+
+.title p{
+  color: #5CAB7D;
+  max-width: 800px;
+}
+
+.portfolio-container{
+  position: relative;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding-bottom: 2.5em;
+  display:flex;
+  justify-content:space-evenly;
+}
+
+.gitbox{
+  width:450px;
+  height: auto; 
+}
+
+.gitbox h3{
+  color: #4ADBC8;
+}
+
+.gitbox p{
+  color: #5CAB7D;
+}
+
+.gitpic{
+background:url(/img/business-computer-connection-contemporary.jpg);
+background-position:center;
+background-size:cover;
+width:100%;
+height:14em;
+margin:0 auto 1em auto;
+}
+
+.dribbox{
+  height: auto;
+  width:450px;
+}
+
+.dribbox h3{
+  color: #4ADBC8;
+}
+
+.dribbox p{
+  color: #5CAB7D;
+}
+
+.dribpic{
+  background: url(/img/city-buildings-and-trees-during-golden-hour.jpg);
+  background-size:cover;
+  background-position:center;
+  width:auto;
+  height:14em;
+  margin:0 auto 1em auto;
 }
 
