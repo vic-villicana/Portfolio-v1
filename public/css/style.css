@@ -475,3 +475,34 @@ margin:0 auto 1em auto;
   margin:0 auto 1em auto;
 }
 
+
+/*--footer---*/
+footer{
+  height: 9em;
+  width:100%;
+  background:linear-gradient(rgb(59, 65, 75),#3F4B3B);
+  padding: 2em 2em 0em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.footer{
+  display: flex;
+  justify-content: space-around;
+}
+
+footer p{
+  display: flex;
+  color: #4ADBC8;
+}
+
+.footer-links-one{
+  display: flex;
+  flex-direction:column;
+}
+
+.footer-links-one a{
+  text-decoration: none;
+  color: white;
+}
