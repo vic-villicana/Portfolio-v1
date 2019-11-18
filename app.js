@@ -8,6 +8,10 @@ app.get("/", (req, res)=>{
   res.render("home")
 });
 
+app.get("/projects", (req, res)=>{
+  res.render("projects");
+})
+
 const port = process.env.PORT || 3000;
 app.listen(port, ()=>{
   console.log("server started")
