@@ -625,7 +625,7 @@ button{
   position: relative;
   display:flex;
   flex-direction: column;
-  width: 550px;
+  width: 525px;
   height: auto;
   align-content:space-between;
 }
@@ -634,13 +634,13 @@ button{
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 550px;
+  width: 525px;
   height: auto;
 }
 
 .box{
   margin: 5em auto;
-  width: 550px;
+  width: 525px;
 }
 
 .box-p-intro{
@@ -659,7 +659,7 @@ button{
 
 .box-two{
   margin:4em auto;
-  width: 550px;
+  width: 100%;
 }
 
 .window-one{
@@ -683,12 +683,10 @@ button{
   background:url(/img/everything-is-connected-neon-light-signage-1356300.jpg);
   background-position: center;
   background-size: cover;
-  width:550px;
+  width:100%;
   height:350px;
 
 }
-
-
 
 .jumbo-pic{
   background:url(/img/city-buildings-and-trees-during-golden-hour.jpg);
