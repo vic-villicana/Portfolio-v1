@@ -24,6 +24,13 @@ app.get("/contact", (req, res)=>{
   res.render("contact");
 })
 
+
+
+app.get("/thankyou", (req,res)=>{
+  res.render("thankyou")
+  
+})
+
 app.post("/incoming", (req,res)=>{
   let name = req.body.name;
   let email = req.body.email;
@@ -49,12 +56,14 @@ app.get("/incoming", (req, res)=>{
 });
 
 app.get("/incoming/:id", (req, res)=>{
-  res.render("show")
-})
-
-app.get("/thankyou", (req,res)=>{
-  res.render("thankyou")
-  
+  message.findById(req.params.id, (err, foundMessage)=>{
+    if(err){
+      console.log(err);
+    }
+    else {
+      res.render("show", {messages: foundMessage})
+    }
+  })
 })
 
 const port = process.env.PORT || 3000;
