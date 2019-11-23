@@ -1,0 +1,15 @@
+<% include partials/header %>
+<% include partials/nav %>
+<div class="header">
+<% messages.forEach(function(messages){ %>
+
+  <div class="square">
+  <h2><%=messages.name %></h2>
+  <p><%=messages.email%></p>
+
+  </div>
+
+<%});%>
+
+</div>
+<% include partials/footer %>
