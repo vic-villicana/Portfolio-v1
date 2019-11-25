@@ -1,8 +1,11 @@
 let express = require("express"),
-      app     = express();
-let bodyParser = require("body-parser");
-let mongoose = require('mongoose');
-let message = require("./models/messages");
+    app     = express(),
+    bodyParser = require("body-parser"),
+    mongoose = require('mongoose'),
+    passport = require('passport'),
+    localStrategy = require('passport-local'),
+    User = require('./models/users.js'),
+    message = require("./models/messages");
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
@@ -11,6 +14,20 @@ app.use(bodyParser.urlencoded({extended:true}));
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
 mongoose.connect("mongodb://localhost/portfolio", {useNewUrlParser:true});
+
+//passport authentication
+app.use(require("express-session")({
+  secret:"Once again I shall prevail.",
+  resave:false,
+  saveUninitialized:false
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new localStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 
 app.get("/", (req, res)=>{
   res.render("home")
@@ -23,8 +40,6 @@ app.get("/projects", (req, res)=>{
 app.get("/contact", (req, res)=>{
   res.render("contact");
 })
-
-
 
 app.get("/thankyou", (req,res)=>{
   res.render("thankyou")
@@ -65,6 +80,25 @@ app.get("/incoming/:id", (req, res)=>{
     }
   })
 })
+
+//auth routes
+app.get("/register", (req, res)=>{
+  res.render("register");
+})
+
+app.post("/register", (req, res)=>{
+  var newUser = new User({username:req.body.username});
+  User.register(newUser, req.body.password, (err, user)=>{
+    if(err){
+      console.log(err);
+      res.render("register");
+    }
+    passport.authenticate("local")(req,res, ()=>{
+      res.redirect("/incoming");
+    });
+  });
+});
+
 
 const port = process.env.PORT || 3000;
 app.listen(port, ()=>{
