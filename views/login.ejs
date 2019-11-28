@@ -1,0 +1,15 @@
+<% include  partials/header %>
+<div class="header">
+    <% include partials/nav %>
+    <div class="void register">
+      <h1>Login</h1>
+      <div class="form">
+        <form action="/login" method="POST">
+          <input type="name" placeholder="Username" name="username">
+          <input type="password" placeholder="password" name="password">
+          <button>enter</button>
+        </form>
+      </div>
+    </div>
+</div>
+<% include partials/footer %>

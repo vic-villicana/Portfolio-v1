@@ -33,8 +33,8 @@ app.get("/", (req, res)=>{
   res.render("home")
 });
 
-app.get("/projects", (req, res)=>{
-  res.render("projects");
+app.get("/projecttipsy", (req, res)=>{
+  res.render("projecttipsy");
 })
 
 app.get("/contact", (req, res)=>{
@@ -60,7 +60,7 @@ app.post("/incoming", (req,res)=>{
   }); 
 });
 
-app.get("/incoming", (req, res)=>{
+app.get("/incoming", isloggedIn, (req, res)=>{
   message.find({}, (err, newMessages)=>{
     if(err){
       console.log(err)
@@ -99,8 +99,31 @@ app.post("/register", (req, res)=>{
   });
 });
 
+app.get('/login', (req, res)=>{
+  res.render("login");
+})
 
+app.post("/login", passport.authenticate("local",
+  {
+    successRedirect:"/incoming",
+    failureRedirect:"/login"
+  }), (req, res)=>{
+});
+
+app.get("/logout", (req, res)=>{
+  req.logout();
+  res.redirect("/login");
+});
+
+function isloggedIn(req,res, next){
+  if(req.isAuthenticated()){
+    return next();
+  }
+  res.redirect("/login")
+}
 const port = process.env.PORT || 3000;
 app.listen(port, ()=>{
   console.log("server started")
 });
+
+
