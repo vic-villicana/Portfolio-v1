@@ -37,6 +37,14 @@ app.get("/projecttipsy", (req, res)=>{
   res.render("projecttipsy");
 })
 
+app.get("/projectdzul", (req,res)=>{
+  res.render("projectdzul");
+})
+
+app.get("/projectthree", (req, res)=>{
+  res.render("projectthree");
+});
+
 app.get("/contact", (req, res)=>{
   res.render("contact");
 })
