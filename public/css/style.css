@@ -29,6 +29,7 @@ body{
 
 .proj{
   background:rgb(29, 29, 29);
+
 }
 
 .btn a{
@@ -41,16 +42,28 @@ body{
 .navbar{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   width:100%;
-  padding:1.5em 2em;
-  
+  height: 10vh;
+  padding: 2em 0;
 }
 
 .navbar a{
   color:#5CAB7D;
   text-decoration: none;
   padding:0 2em;
+}
+
+.burger{
+  display: none;
+}
+
+.burger div{
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin:5px;
+  transition: .3s ease;
 }
 
 .logo{
@@ -63,7 +76,15 @@ body{
   position:relative;
   height:100vh;
   background:#3F4B3B;
+  
 }
+
+.inc{
+  height:100%;
+  padding-bottom: 5em;
+}
+
+
 
 .pro-header{
   position: relative;
@@ -127,6 +148,12 @@ body{
   margin: 3em auto;
   color:#4ADBC8;
   font-size:1.25rem;
+}
+
+.title.pr{
+  color:rgb(231, 231, 231);
+  font-size:2.5rem;
+  margin: 0 auto;
 }
 
 .spacer{
@@ -200,7 +227,7 @@ body{
   background: black;
   height:auto;
   position:absolute;
-  width:25em;
+  width: auto;
   padding:.75em 1em;
   top:-15%;
   left:15%;
@@ -213,7 +240,7 @@ body{
 
 .skills-menu p{
   color:#4ADBC8;
-  
+  max-width:400px;
 }
 .list li{
   list-style:none;
@@ -251,10 +278,13 @@ body{
 /*---cnotact section----*/
 
 .contact{
-  padding:5em 8em;
+  margin: 4em auto;
+
 }
 
 .contact-box{
+  max-width: 1250px;
+  margin: 5em auto;
   position:relative;
   display:flex;
   border:2px solid #B3001B;
@@ -301,6 +331,10 @@ body{
   margin: 2em auto;
   font-size: 1rem;
   background: none;
+}
+
+.contact-form textarea {
+  width: 100%;  
 }
 
 #submit{
@@ -487,20 +521,24 @@ button{
 }
 
 .gitbox{
-  width:450px;
+  width: auto;
   height: auto; 
 }
 
 .gitbox h3{
   color: #4ADBC8;
+  display: block;
 }
 
 .gitbox p{
   color: #5CAB7D;
+  display: block;
 }
 
+
+
 .gitpic{
-background:url(/img/business-computer-connection-contemporary.jpg);
+
 background-position:center;
 background-size:cover;
 width:100%;
@@ -509,20 +547,21 @@ margin:0 auto 1em auto;
 }
 
 .dribbox{
+  width: auto;
   height: auto;
-  width:450px;
 }
 
 .dribbox h3{
   color: #4ADBC8;
+  display: block;
 }
 
 .dribbox p{
   color: #5CAB7D;
+  display: block;
 }
 
 .dribpic{
-  background: url(/img/city-buildings-and-trees-during-golden-hour.jpg);
   background-size:cover;
   background-position:center;
   width:auto;
@@ -573,7 +612,7 @@ footer p{
   position: relative;
   overflow: hidden;
   height:88vh;
-  width:1250px;
+  max-width:1250px;
   margin: 0 auto;
 }
 
@@ -595,17 +634,20 @@ footer p{
   position: absolute;
   bottom: 125px;
   left: -450px;
-  width: 450px;
+  max-width: 450px;
   opacity: 0;
   background:black;
   color: aliceblue;
   padding:2em;
 }
 
+
+
 .slide.current .content{
   opacity:1;
   transform: translateX(450px);
   transition: all .6s ease-in-out 0.2s;
+  z-index: 2;
 }
 
 .slide .content h2{
@@ -617,6 +659,7 @@ footer p{
   bottom: 4.5%;
   left: 10%;
   outline:none;
+  
 }
 
 button{
@@ -635,9 +678,9 @@ button{
 
 .slider-p{
   max-width:1250px;
-  margin: 2.5em auto;
+  padding: 2.5em 1em;
   color:#4ADBC8;
-  
+  margin: 0 auto;
 }
 
 .slider-p p{
@@ -645,7 +688,7 @@ button{
   max-width: 800px;
 }
 
-/*---projectos---*/
+/*---projecttipsy---*/
 
 .projectos{
   height:100%;
@@ -825,6 +868,63 @@ button{
   color: white;
 }
 
+/*----projectdzul---*/
+.d1{
+  background:url(/img/dzul-four.jpg);
+  background-position-y: 100%;
+  background-size: cover;
+ 
+}
+
+.d2{
+  background:url(/img/dzul-three.jpg);
+  background-position: center;
+  background-size: cover;
+  
+}
+
+.d3{
+  background:url(/img/tipsyscreenshot-development.jpg);
+  background-position: center;
+  background-size: cover;
+  
+}
+
+.d4{
+  background:url(/img/dzul-five.jpg);
+  background-position: center;
+  background-size: cover;
+   
+}
+
+.d5{
+  background:url(/img/dzul-two.jpg);
+  background-position: center;
+  background-size: cover;
+  width:500px;
+  height:550px;   
+}
+
+.d6{
+  background:url(/img/tipsyscreenshot-design.jpg);
+  background-position: center;
+  background-size: cover;
+ 
+}
+
+.d7{
+  background:url(/img/dzul-eight.jpg);
+  background-position: center;
+  background-size: cover;
+   
+}
+ 
+.d8{
+  background:url(/img/tipsyscreenshot-development2.jpg);
+  background-position: center;
+  background-size: cover;
+  
+}
 /*----contact---*/
 
 .void{
@@ -949,3 +1049,220 @@ button{
   left: 50%;
   top: 40%;
 }
+
+/*---media screen*/
+
+@media only screen and (min-width:1824px){
+
+}
+
+@media only screen and (min-width:1224px){
+
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+
+}
+
+@media only screen and (min-width:481px) and (max-width:767px){
+
+}
+
+@media only screen and (min-width:360px) and (max-width:480px){
+  
+  body{
+    max-width:480px;
+    margin:0 auto;
+  }
+
+  .logo{
+    padding-top: 5vh;
+  }
+
+  .navbar{
+    padding: 0;
+  }
+
+  .nav-links{
+    position: absolute;
+    height:35%;
+    background:linear-gradient(#3F4B3B,rgb(59, 65, 75),rgb(59, 65, 75));
+    z-index: 2;
+    width: 100%;
+    top: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    transform:translateY(-146%);
+    transition: transform .5s ease-in-out;
+  }
+
+  .nav-links a{
+    opacity: 0;
+  }
+
+  .nav-active{
+    transform:translateY(0%);
+  }
+
+  .burger{
+    display: block;
+    z-index: 3;
+    padding-top: 5vh;
+    cursor: pointer;
+    
+  }
+
+  @keyframes navframes{
+    from{
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to{
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .toggle .line2{
+    opacity:0;
+  }
+  .toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+
+  .title {
+    margin: 3em 1em;    
+  } 
+
+  .about-me{
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    height:100%;
+    width:100%;
+  }
+
+  .bio{
+    max-width:100%;
+    background:linear-gradient(#3F4B3B, rgb(59, 65, 75));
+  }
+
+  .bio-square {
+    max-width: 75%;
+    margin: 5em auto 5em auto;
+}
+
+  .picture{
+    background:url(/img/black-iphone-7.jpg);
+    background-position:center;
+    background-size:cover;
+    width:100%;
+    height: auto;
+  }
+
+  .skills-menu {
+    display: inline-block;
+    background: black;
+    height: auto;
+    position: absolute;
+    width: 90%;
+    padding: .75em 1em;
+    top: -15%;
+    left: 0%;
+    margin: 0 auto;
+}
+
+  .slide .content {
+    width: 85%;
+  }
+
+  .portfolio-container{
+    position: relative;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding-bottom: 2.5em;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    
+  }
+
+  .gitbox{
+    text-align: center;
+    height: auto; 
+    padding-bottom: 4.5em;
+  }
+
+  .dribbox{
+    text-align: center;
+    height: auto;
+  }
+
+  .gitbox img{
+    width:35%;
+    color: #B3001B;
+  }
+  
+  .dribbox img{
+    width:35%;
+  }
+
+  .port-container{
+    max-width: 480px;
+    padding: 1em;
+    display: block;
+  }
+
+  .proj {
+    background: rgb(29, 29, 29);
+    margin-top: 0;
+  }
+  
+  .contact{
+
+  }
+
+  .contact-box {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #B3001B;
+  } 
+
+  .contact-box .bio-square{
+    padding:0;
+    margin: 4em auto;
+  }
+
+  .contact-form {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-form input {
+    margin-right: 1em;
+    padding: 0em;
+    color: #5CAB7D;
+    width: 100%;
+    height: auto;
+    border: none;
+    border-bottom: solid 1px #4ADBC8;
+    margin: 2em auto;
+    font-size: 1rem;
+    background: none;
+  }
+
+  .contact-form form {
+    margin: 0;
+    margin-bottom: 4em;
+    
+  }
+} 
