@@ -66,10 +66,8 @@ body{
   transition: .3s ease;
 }
 
-.logo{
-  color: #B3001B;
-  font-family:'Sedgwick Ave Display', cursive;
-  font-size:1.5rem;
+.logo a{
+  padding: 0;
 }
 
 .header{
@@ -674,7 +672,7 @@ footer p{
 .buttons{
   position: absolute;
   bottom: 4.5%;
-  left: 10%;
+  left: 5%;
   outline:none;
   display: flex;
 }
@@ -792,6 +790,14 @@ footer p{
   padding:.5em;
 }
 
+.fullpage img{
+  position: relative;
+  max-width: 100%;
+  height: 90%;
+  transform: translate(-50%, 0%);
+  left: 50%;
+}
+
 .img-container{
   position: relative;
   display: flex;
@@ -821,6 +827,13 @@ footer p{
   padding-right: 1em;
 }
 
+.full-page img{
+  position: relative;
+  max-width: 90%;
+  height: 90%;
+  margin: 0 auto;    
+}
+
 .info-container{
   position: relative;
   margin-bottom: 8em;
@@ -835,15 +848,7 @@ footer p{
   margin:7em auto 3em auto;
 }
 
-.full-screen-img{
-  position: relative;
-  max-width: 1100px;
-  height: 620px;
-  margin: 0 auto;
-  background: url(/img/tipsyscreenshot-development2.jpg);
-  background-position: center;
-  background-size: cover;
-}
+
 
 .slider-info{
   position: relative;
@@ -853,7 +858,7 @@ footer p{
 }
 
 .slide-info{
-  padding: 6em 5em;
+  padding: 3em 4em;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1282,29 +1287,285 @@ footer p{
 
 /*---media screen*/
 
-@media only screen and (min-width:1824px){
 
-}
 
-@media only screen and (min-width:1224px){
+@media only screen and (min-width:767px) and (max-width:1024px){
 
-}
+  body{
+    max-width:1024px;
+    margin:0 auto;
+  }
 
-@media only screen and (min-width:768px) and (max-width:1024px){
+  .logo{
+    
+  }
 
-}
+  .navbar{
+    padding: 2em 0;
+    height: auto;
+    background-color: #3F4B3B;
+  }
 
-@media only screen and (min-width:481px) and (max-width:767px){
+  .nav-links{
+    position: absolute;
+    height:auto;
+    background:linear-gradient(#3F4B3B,rgb(59, 65, 75),rgb(59, 65, 75));
+    z-index: 2;
+    width: 100%;
+    top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    transform:translateY(-146%);
+    transition: transform .5s ease-in-out;
+  }
+
+  .nav-links a{
+    opacity: 0;
+    font-size: 1.5em;
+    padding: 1em 2em;
+  }
+
+  .nav-active{
+    transform:translateY(0%);
+  }
+
+  .burger{
+    display: block;
+    z-index: 3;
+    cursor: pointer;    
+  }
+
+  @keyframes navframes{
+    from{
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to{
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .toggle .line2{
+    opacity:0;
+  }
+  .toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .pro-info-container {
+    position: relative;
+    padding: 2em 1em; 
+    display: flex;
+    justify-content: space-around;
+  }
+
+  
   .contact-form {
     width: 100%;
     display: flex;
     justify-content: center;
   }
   .bio-square {
-    max-width: 50%;
-    margin: 10em auto 13em auto;
+    max-width: 80%;
+    margin: 5em auto 6em auto;
+  }
+
+  .contact-box{
+    flex-direction: column;
+    max-width: 600px;
+  }
+
+  .contact-box .bio-square {
+    padding: 0;
+    margin: 4em auto;
+  }
+
+  .contact-form form {
+    margin: 0;
+    margin-bottom: 4em;
+  }
+
+  .pro-three{
+    position:relative;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .header-two{
+    position: relative;
+    height: 85vh;
+    width: 100%;
+    background: url(/img/bar-bartender.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: 12em;
+  }
+
+  .void.v2{
+    padding: 2em 1em;
+    text-align: left;
+    left: 0%;
+  }
+
+  .void.v22{
+    position: relative;
+    left: -1000px;
+    height: auto;
+    text-align: left;
+    padding: 1em;
+    opacity: 0;
+    font-size: 1rem;
+  }
+
+  .pro-info{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+  }
+
+  .pro-info-container{
+    position:relative;
+    padding: 1em;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    margin-bottom: 4em;
+  }
+
+  .pic-banner{
+    position: relative;
+    
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
+
+  .respo{
+    flex-direction: column;
+  }
+
+  .bs-2{
+    position: relative;
+    max-width: 450px;
+    margin: 0;
+  }
+
+  .bs-3{
+    transform: translate(0, 0%);
+    position: relative;
+    max-width: 650px;
+    margin: 0;
+    height: auto;
+  }
+
+  .pro-info img{
+    position: relative;
+    max-width: 100%;
+    height: 90%;
+    padding:.5em;
+    margin-bottom: 1.5em;
+  }
+
+  .img-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width:100%;  
+  }
+
+  .img-container-two{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    right: -1015px;
+    opacity: 0;
+    width: 59%;
+    margin-top: 1em;
+  }
+
+  .img-container-two-c{
+    display: flex;
+    flex-direction: row;
+    padding-top:1em;  
+    width: auto;
+  }
+
+  .img-container-two-c img{
+    padding-right: 1em;
+  }
+
+  .img-container-two img{
+    margin-bottom: 0;
+  }
+
+  .info-container{
+    position: relative;
+    margin-bottom: 8em;
+    
+  }
+
+  .info-container .pro-info-container{
+    padding: 2em 7em;
+  }
+
+  .bs-4{
+    max-width: 75%;
+    margin:3em auto ;
+  }
+
+  .fullpage img {
+    position: relative;
+    max-width: 90%;
+    height: 90%;
+  }
+
+ /*------------projects page----------*/
+
+ .slider-info {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 50em;
+  }
+
+  .slide-info {
+    padding: 3em 2em;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  .content-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+  }
+
+  .buttons {
+    position: absolute;
+    bottom: 0%;
+    outline: none;
+    display: flex;
   }
 }
+
 
 @media only screen and (min-width:360px) and (max-width:480px){
   
@@ -1320,6 +1581,7 @@ footer p{
   .navbar{
     padding: 2em 0;
     height: auto;
+    background: #3F4B3B;
   }
 
   .nav-links{
@@ -1328,7 +1590,7 @@ footer p{
     background:linear-gradient(#3F4B3B,rgb(59, 65, 75),rgb(59, 65, 75));
     z-index: 2;
     width: 100%;
-    top: 15vh;
+    top: 12vh;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -1398,7 +1660,7 @@ footer p{
   .bio-square {
     max-width: 75%;
     margin: 5em auto 5em auto;
-}
+  }
 
   .picture{
     background:url(/img/black-iphone-7.jpg);
@@ -1481,7 +1743,7 @@ footer p{
 
   .contact-box .bio-square{
     padding:0;
-    margin: 4em auto;
+    margin: 2em auto;
   }
 
   .contact-form {
@@ -1510,7 +1772,7 @@ footer p{
 
   .contact-form form {
     margin: 0;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
     
   }
 
@@ -1528,9 +1790,9 @@ footer p{
     justify-content: space-around;
     align-items: center;
     padding: 3em 0;
-   }
+  }
 
-   .void2 {
+  .void2 {
     background: black;
     display: inline-block;
     height: 100%;
@@ -1546,7 +1808,7 @@ footer p{
     margin-top: 3em;
   }
 
-   .header-con{
+  .header-con{
     position:relative;
     height:auto;
     background:#3F4B3B;  
@@ -1555,139 +1817,190 @@ footer p{
   /*------------projects page----------*/
 
 
-.pro-three{
-  position:relative;
-  height: 100vh;
-  width: 100%;
-}
+  .pro-three{
+    position:relative;
+    height: 100vh;
+    width: 100%;
+  }
 
-.header-two{
-  position: relative;
-  height: 85vh;
-  width: 100%;
-  background: url(/img/bar-bartender.jpg);
-  background-position: center;
-  background-size: cover;
-  margin-top: 12em;
-}
+  .header-two{
+    position: relative;
+    height: 85vh;
+    width: 100%;
+    background: url(/img/bar-bartender.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-top: 12em;
+  }
 
-.void.v2{
-  padding: 2em 1em;
-  text-align: left;
-  left: 15%;
-}
+  .void.v2{
+    padding: 2em 1em;
+    text-align: left;
+    left: 0%;
+  }
 
-.void.v22{
-  position: absolute;
-  left: -800px;
-  height: auto;
-  text-align: left;
-  padding: 1em;
-  opacity: 0;
-  
-}
+  .void.v22{
+    position: relative;
+    left: -1000px;
+    height: auto;
+    text-align: left;
+    padding: 1em;
+    opacity: 0;
+    font-size: 1rem;
+  }
 
-.pro-info{
-  position: relative;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction:column;
-}
+  .pro-info{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+  }
 
-.pro-info-container{
-  position:relative;
-  padding: 8em 7em;
-  display: flex;
-  justify-content: space-around;
-}
+  .pro-info-container{
+    position:relative;
+    padding: 1em;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    margin-bottom: 4em;
+  }
 
-.pic-banner{
-  position: relative;
-  
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: auto;
-}
+  .pic-banner{
+    position: relative;
+    
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+  }
 
-.respo{
-  
-  justify-content: space-between;
-}
+  .respo{
+    flex-direction: column;
+  }
 
-.bs-2{
-  position: relative;
-  max-width: 450px;
-  margin: 0;
-}
+  .bs-2{
+    position: relative;
+    max-width: 450px;
+    margin: 0;
+  }
 
-.bs-3{
-  transform: translate(0, 145%);
-  position: absolute;
-  max-width: 650px;
-  margin: 0;
-  height: auto;
-}
+  .bs-3{
+    transform: translate(0, 0%);
+    position: relative;
+    max-width: 650px;
+    margin: 0;
+    height: auto;
+  }
 
-.pro-info img{
-  position: relative;
-  max-width: 600px;
-  padding:.5em;
-}
+  .pro-info img{
+    position: relative;
+    max-width: 100%;
+    height: 90%;
+    padding:.5em;
+    margin-bottom: 1.5em;
+  }
 
-.img-container{
-  position: relative;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  width:100%;  
-}
+  .img-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width:100%;  
+  }
 
-.img-container-two{
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  right: -600px;
-  opacity: 0;
-  
-}
+  .img-container-two{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    right: -796px;
+    opacity: 0;
+    width: 57%;
+    margin-top: 1em;
+  }
 
-.img-container-two-c{
-  display: flex;
-  flex-direction: row;
-  padding-top:1em;  
-  width: auto;
-}
+  .img-container-two-c{
+    display: flex;
+    flex-direction: row;
+    padding-top:1em;  
+    width: auto;
+  }
 
-.img-container-two-c img{
-  padding-right: 1em;
-}
+  .img-container-two-c img{
+    padding-right: 1em;
+  }
 
-.info-container{
-  position: relative;
-  margin-bottom: 8em;
-}
+  .img-container-two img{
+    margin-bottom: 0;
+  }
 
-.info-container .pro-info-container{
-  padding: 2em 7em;
-}
+  .info-container{
+    position: relative;
+    margin-bottom: 8em;
+   
+  }
 
-.bs-4{
-  max-width: 55%;
-  margin:7em auto 3em auto;
-}
+  .info-container .pro-info-container{
+    padding: 2em 7em;
+  }
 
-.full-screen-img{
-  position: relative;
-  max-width: 1100px;
-  height: 620px;
-  margin: 0 auto;
-  background: url(/img/tipsyscreenshot-development2.jpg);
-  background-position: center;
-  background-size: cover;
-}
+  .bs-4{
+    max-width: 100%;
+    margin:3em 1em ;
+  }
+
+  .full-screen-img{
+    position: relative;
+    max-width: 1100px;
+    height: 275px;
+    margin: 0 auto;
+    background: url(/img/tipsyscreenshot-development2.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+ /*------------projects page----------*/
+
+  .slider-info {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 46em;
+  }
+  .slide-info {
+    padding: 3em 2em;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  .content-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+  }
+
+  .buttons {
+    position: absolute;
+    bottom: 0%;
+    right: 10%;
+    left:0%;
+    outline: none;
+    display: flex;
+  }
+
+  .fullpage img{
+    position: relative;
+    max-width: 90%;
+    height: 90%;
+        
+  }
 
 } 
 
