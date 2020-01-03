@@ -1,12 +1,21 @@
-let express = require("express"),
-    app     = express(),
-    bodyParser = require("body-parser"),
-    mongoose = require('mongoose'),
-    passport = require('passport'),
-    localStrategy = require('passport-local'),
-    User = require('./models/users.js'),
-    message = require("./models/messages");
+const express = require("express"),
+      compression = require('compression'),
+      helmet = require('helmet'),
+      app     = express(),
+      https = require('https'),
+      fs = require('fs'),
+      {check, validationResult} = require('express-validator'),
+      bodyParser = require("body-parser"),
+      mongoose = require('mongoose'),
+      passport = require('passport'),
+      localStrategy = require('passport-local'),
+      flash = require("connect-flash"),
+      User = require('./models/users.js'),
+      message = require("./models/messages");
 
+
+app.use(compression());
+app.use(helmet());
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
@@ -22,6 +31,12 @@ app.use(require("express-session")({
   saveUninitialized:false
 }));
 
+app.use(require('connect-flash')());
+app.use(function (req, res, next) {
+  res.locals.messages = require('express-messages')(req, res);
+  next();
+});
+
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new localStrategy(User.authenticate()));
@@ -33,8 +48,8 @@ app.get("/", (req, res)=>{
   res.render("home")
 });
 
-app.get("/projecttipsy", (req, res)=>{
-  res.render("projecttipsy");
+app.get("/projectipsy", (req, res)=>{
+  res.render("projectipsy");
 })
 
 app.get("/projectdzul", (req,res)=>{
@@ -54,20 +69,6 @@ app.get("/thankyou", (req,res)=>{
   
 })
 
-app.post("/incoming", (req,res)=>{
-  let name = req.body.name;
-  let email = req.body.email;
-  let letter = req.body.message;
-  let newMessage = {name:name, email:email, message:letter};
-  message.create(newMessage, (err, newCreaeted)=>{
-    if(err){
-      console.log(err);
-    }else{
-      res.redirect("/thankyou")
-    }
-  }); 
-});
-
 app.get("/incoming", isloggedIn, (req, res)=>{
   message.find({}, (err, newMessages)=>{
     if(err){
@@ -76,6 +77,32 @@ app.get("/incoming", isloggedIn, (req, res)=>{
       res.render('incoming', {messages:newMessages})
     }
   });
+});
+
+app.post("/incoming", [
+  check('name', 'name must have more than 3 characters').not().isEmpty().isLength({min:3}).trim().escape(),
+  check('email', 'Email address must be a valid email address').isEmail().not().isEmpty(),
+  check('message').not().isEmpty(),
+  ], 
+  (req,res)=>{  
+  console.log(req.body);
+  const error = validationResult(req);
+    if(!error.isEmpty()){
+      req.flash("error", "please input info in right format")
+      res.render('contact', {errors:error})
+    }else{
+      let name = req.body.name;
+      let email = req.body.email;
+      let letter = req.body.message;
+      let newMessage = {name:name, email:email, message:letter};
+      message.create(newMessage, (err, newCreated)=>{
+        if(err){
+          console.log(err)
+        }else {
+        res.redirect("/thankyou");
+        }
+      });
+    }  
 });
 
 app.get("/incoming/:id", (req, res)=>{
@@ -129,9 +156,14 @@ function isloggedIn(req,res, next){
   }
   res.redirect("/login")
 }
+
+let options = {
+  key: fs.readFileSync('./key.pem'),
+  cert: fs.readFileSync('./cert.pem'),
+  passphrase: "shlemmies",
+}
+
 const port = process.env.PORT || 3000;
-app.listen(port, ()=>{
-  console.log("server started")
-});
-
-
+https.createServer(options, app, (req, res)=>{
+  res.writeHead(200);
+}).listen(port);
