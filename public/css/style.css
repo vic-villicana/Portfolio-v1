@@ -6,7 +6,7 @@
 
 html{
   font-family: 'Exo 2', sans-serif;
-  font-size:16px;
+  font-size:17px;
   text-rendering: optimizeLegibility;
   background:rgb(59, 65, 75);
   font-weight:400;
@@ -78,11 +78,18 @@ body{
 
 .header-con{
   position:relative;
-  height:100vh;
+  height:100%;
   background:#3F4B3B;  
 }
 
+.error li{
+  color: rgb(216, 66, 66);
+  list-style:none;
+};
 
+.success li{
+  color: #5CAB7D;
+}
 
 .inc{
   height:100%;
@@ -223,7 +230,7 @@ body{
 .skills{
   display:block;
   position: relative;
-  background:url(/img/red-lights-in-line-on-black-surface.jpg);
+  background:url(/img/code-computer-data-.jpg);
   background-position:center;
   background-size:cover;
   height:40em;
@@ -1048,6 +1055,18 @@ footer p{
   left: 50%;
   top: 50%;
 }
+
+/*---project dzul----*/
+.dzul-head{
+  position: relative;
+  height: 85vh;
+  width: 100%;
+  background: url(/img/dzul-four.jpg);
+  background-position: center;
+  background-size: cover;
+  margin-top: 12em;
+}
+
 
 /*---media screen*/
 
