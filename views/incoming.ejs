@@ -1,24 +1,18 @@
 <% include partials/header %>
-
-
 <div class="header inc">
-  <% include partials/nav %>
-  
+  <% include partials/nav %>  
   <div class="title">
     <h1>Greetings Shawty</h1>
     <p>Here are your messages</p>
   </div>
 <% messages.forEach(function(messages){ %>
-
   <div class="square">
   <h2><%=messages.name%></h2>
   <p><%=messages.email%></p>
     <p class="btn">
-      <a href="/incoming/<%= messages._id %>" >View Info</a>
+      <a href="/incoming/<%= messages._id %>">View Info</a>
     </p>
   </div>
-
 <%});%>
-
 </div>
 <% include partials/footer %>
