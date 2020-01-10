@@ -29,7 +29,7 @@ body{
 
 .proj{
   background:rgb(29, 29, 29);
-
+  margin-left: 2em;
 }
 
 .btn a{
@@ -680,6 +680,7 @@ footer p{
   position: absolute;
   bottom: 4.5%;
   left: 5%;
+  padding-left: 1.5em;
   outline:none;
   display: flex;
 }
@@ -794,7 +795,7 @@ footer p{
 .pro-info img{
   position: relative;
   max-width: 600px;
-  padding:.5em;
+  
 }
 
 .fullpage img{
@@ -1069,7 +1070,35 @@ footer p{
 
 
 /*---media screen*/
+@media only screen and (min-width:1025px) and (max-width:1430px){
 
+  .slide-info {
+    padding: 3em 4em;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  .void.v22 {
+    position: absolute;
+    left: -900px;
+    height: auto;
+    text-align: left;
+    padding: 1em;
+    opacity: 0;
+  }
+
+  .img-container-two {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    right: -725px;
+    opacity: 0;
+  }
+}
 
 
 @media only screen and (min-width:767px) and (max-width:1024px){
@@ -1680,7 +1709,7 @@ footer p{
     position: relative;
     max-width: 100%;
     height: 90%;
-    padding:.5em;
+    
     margin-bottom: 1.5em;
   }
 
