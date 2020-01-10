@@ -6,6 +6,8 @@ const express = require("express"),
       fs = require('fs'),
       {check, validationResult} = require('express-validator'),
       bodyParser = require("body-parser"),
+      debug = require('debug')('incoming'),
+      listen = require('debug')('http'),
       mongoose = require('mongoose'),
       passport = require('passport'),
       localStrategy = require('passport-local'),
@@ -72,7 +74,7 @@ app.get("/thankyou", (req,res)=>{
 app.get("/incoming", isloggedIn, (req, res)=>{
   message.find({}, (err, newMessages)=>{
     if(err){
-      console.log(err)
+      debug('display error:' + err);
     }else{
       res.render('incoming', {messages:newMessages})
     }
@@ -97,7 +99,7 @@ app.post("/incoming", [
       let newMessage = {name:name, email:email, message:letter};
       message.create(newMessage, (err, newCreated)=>{
         if(err){
-          console.log(err)
+          debug('post error:' + err);
         }else {
         res.redirect("/thankyou");
         }
@@ -108,7 +110,7 @@ app.post("/incoming", [
 app.get("/incoming/:id", (req, res)=>{
   message.findById(req.params.id, (err, foundMessage)=>{
     if(err){
-      console.log(err);
+      debug('retrieve error:' + err);
     }
     else {
       res.render("show", {messages: foundMessage})
@@ -125,7 +127,7 @@ app.post("/register", (req, res)=>{
   var newUser = new User({username:req.body.username});
   User.register(newUser, req.body.password, (err, user)=>{
     if(err){
-      console.log(err);
+      debug('register error:' + err);
       res.render("register");
     }
     passport.authenticate("local")(req,res, ()=>{
