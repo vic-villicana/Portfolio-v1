@@ -21,7 +21,7 @@ body{
 /*---buttons---*/
 .btn{
   display: inline-block;
-  background:#B3001B;
+  background:#ffa249;
   padding:.50em 1em;
   margin-top:1.5em;
   border-radius:4px;
@@ -49,7 +49,7 @@ body{
 }
 
 .navbar a{
-  color:#4ADBC8;
+  color:#c0fdf3;
   text-decoration: none;
   padding:0 2em;
 }
@@ -163,7 +163,7 @@ body{
 .title{
   max-width:1250px;
   margin: 3em auto;
-  color:#4ADBC8;
+  color:#8fe7f7;
   font-size:1.25rem;
 }
 
@@ -203,12 +203,15 @@ body{
 
 .bio-square h2{
   padding-bottom:.50em;
-  color:#4ADBC8;
-
+  /*color:#4ADBC8;*/
+  /*color:#c0fdf3;*/
+  color:#8fe7f7;
 }
 
 .bio-square p{
-  color: #5CAB7D;
+  /*color: #5CAB7D;*/
+  /*color: #8fe7f7;*/
+  color: #C5FFF5;
 }
 
 .specialty{
@@ -250,18 +253,18 @@ body{
 }
 
 .skills-menu h3{
-  color:#4ADBC8;
+  color:#C5FFF5;
   padding:.5em 0;
 }
 
 .skills-menu p{
-  color:#4ADBC8;
+  color:#8fe7f7;
   max-width:400px;
 }
 .list li{
   list-style:none;
   padding:.5em 0;
-  color: white;
+  color: #C5FFF5;
 }
 
 .list{
@@ -312,7 +315,7 @@ body{
 
 .contact-box .bio-square h2 {
   padding-bottom: .50em;
-  color: #4ADBC8;
+  color: #8fe7f7;
   text-align: center;
   font-size: 2em;
 }
@@ -334,7 +337,7 @@ body{
 .contact-form input{
   margin-right:1em;
   padding:0em;
-  color: #5CAB7D;
+  color: #c0fdf3;
   width: 70%;
   height: auto;
   border: none;  
@@ -347,7 +350,7 @@ body{
 .contact-form textarea{
   margin-right:1em;
   padding:.5em;
-  color: #5CAB7D;
+  color: #c0fdf3;
   width: 70%;
   height: auto;
   border: none;  
@@ -364,7 +367,7 @@ body{
   padding:1em;
   width: 40%;
   display: inline-block;
-  background: #B3001B;
+  background: #ffa249;
   padding: .50em 1em;
   margin-top: 1.5em;
   border-radius: 4px;
@@ -530,7 +533,7 @@ button{
 
 
 .title p{
-  color: #5CAB7D;
+  color: #c0fdf3;
   max-width: 800px;
 }
 
@@ -549,12 +552,12 @@ button{
 }
 
 .gitbox h3{
-  color: #4ADBC8;
+  color: #c0fdf3;
   display: block;
 }
 
 .gitbox p{
-  color: #5CAB7D;
+  color: #8fe7f7;
   display: block;
 }
 
@@ -574,12 +577,12 @@ margin:0 auto 1em auto;
 }
 
 .dribbox h3{
-  color: #4ADBC8;
+  color: #c0fdf3;
   display: block;
 }
 
 .dribbox p{
-  color: #5CAB7D;
+  color: #8fe7f7;
   display: block;
 }
 
@@ -611,7 +614,7 @@ footer{
 
 footer p{
   display: flex;
-  color: #4ADBC8;
+  color: #8fe7f7;
 }
 
 .footer-links-one{
@@ -659,7 +662,7 @@ footer p{
   max-width: 450px;
   opacity: 0;
   background:black;
-  color: aliceblue;
+  color:#C5FFF5;/*#8fe7f7*/;
   padding:2em;
 }
 
@@ -674,6 +677,7 @@ footer p{
 
 .slide .content h2{
   margin-bottom:.25em;
+  color:#8fe7f7; /*#c0fdf3;*/
 }
 
 .buttons{
@@ -706,12 +710,12 @@ footer p{
 .slider-p{
   max-width:1250px;
   padding: 4em 1em;
-  color:#4ADBC8;
+  color:#8fe7f7;
   margin: 0 auto;
 }
 
 .slider-p p{
-  color: #5CAB7D;
+  color: #C5FFF5;
   max-width: 800px;
 }
 
@@ -964,25 +968,25 @@ footer p{
 }
 
 .void h1  {
-  color: #4ADBC8;
+  color:#8fe7f7; /*#c0fdf3;*/
   padding-bottom: .5em;
 }
 
 .void p{
-  color: #5CAB7D;
+  color:#C5FFF5; /*#8fe7f7;*/
   margin-bottom: 1em;
 }
 .void2 h3  {
-  color: #4ADBC8;
+  color:#8fe7f7;/* #c0fdf3;*/
   padding-bottom: .5em;
 }
 .void2 h4  {
-  color: #4ADBC8;
+  color:#8fe7f7; /*#c0fdf3;*/
   padding-bottom: .5em;
 }
 
 .void2 p{
-  color: #5CAB7D;
+  color:#C5FFF5; /*#8fe7f7;*/
   margin-bottom: 1em;
 }
 
@@ -1098,10 +1102,26 @@ footer p{
     right: -725px;
     opacity: 0;
   }
+
+  .pro-info-container {
+    
+    padding: 8em 3em;
+   
+  }
+
+  .bs-3 {
+    transform: translate(0, 120%);
+    position: absolute;
+    /* max-width: 650px; */
+    width: 56%;
+    margin: 0;
+    height: auto;
+  }
+
 }
 
 
-@media only screen and (min-width:767px) and (max-width:1024px){
+@media only screen and (min-width:720px) and (max-width:1024px){
 
   body{
     max-width:1024px;
