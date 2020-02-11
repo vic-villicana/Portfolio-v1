@@ -21,7 +21,7 @@ body{
 /*---buttons---*/
 .btn{
   display: inline-block;
-  background:#ffa249;
+  background:#B3001B;
   padding:.50em 1em;
   margin-top:1.5em;
   border-radius:4px;
@@ -29,7 +29,7 @@ body{
 
 .proj{
   background:rgb(29, 29, 29);
-  margin-left: 2em;
+  
 }
 
 .btn a{
@@ -108,13 +108,9 @@ body{
 }
 
 .hero-box{
-  position:absolute;
-  width:auto;
+  position:relative;
   padding:1em;
   text-align:center;
-  transform: translate(-50%, -50%);
-  top:50%;
-  left:50%;
   display:inline-block;
   background: black;
   -webkit-box-shadow: 1.5px .5px 3px 3px rgba(19, 19, 19, 0.562);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
@@ -136,6 +132,10 @@ body{
   height:75%;
   margin:0 auto;
   top:5%;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
 }
 
 .pip2{
@@ -367,7 +367,7 @@ body{
   padding:1em;
   width: 40%;
   display: inline-block;
-  background: #ffa249;
+  background: #B3001B;
   padding: .50em 1em;
   margin-top: 1.5em;
   border-radius: 4px;
@@ -698,10 +698,10 @@ footer p{
 
 
 .slide:first-child {
-  background:url(/img/city-buildings-and-trees-during-golden-hour.jpg) no-repeat center center/cover;
+  background:url(/img/bar-bartender.jpg) no-repeat center center/cover;
 }
 .slide:nth-child(2) {
-  background:url(/img/blur-business-coffee-commerce.jpg) no-repeat center center/cover;
+  background:url(/img/dzul-four.jpg) no-repeat center center/cover;
 }
 .slide:nth-child(3) {
   background:url(/img/red-lights-in-line-on-black-surface.jpg) no-repeat center center/cover;
@@ -1407,7 +1407,7 @@ footer p{
   }
 
   .logo{
-    
+    z-index: 3;
   }
 
   .navbar{
