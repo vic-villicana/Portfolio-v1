@@ -8,8 +8,11 @@
         <%- messages()%>
       <div class="form">
         <form action="/incoming" method="post">
+          <label for="name"></label>
           <input type="text" placeholder="Name First/Last" name="name">
+          <label for="email"></label>
           <input type="text" placeholder="Email" name="email">
+          <label for="message"></label>
           <textarea name="message" placeholder="Hollaa"></textarea>
           <input id='submit'  type="submit" value="Send It!">
         </form>
