@@ -1,25 +1,16 @@
 <% include partials/header %>
-<header class="header pro-header">
-  <% include partials/nav %>
-  <div class="hero-box">
-    <div>
-      <h1>Projects</h1>
-      <p id="by">by</p>
-      <h1>Villicana</h1>
-    </div>
-  </div>
-</header>
 
-<section class="pro-three">
-  <div class="header-two">
-    <div class="void v2">
-      <h1>Tipsy Bar</h1>
+<section class="pro-three" >
+  <% include partials/nav %>
+  <div class="header-two" data-aos="fade-left" >
+    <div class="void v2" data-aos="fade-up">
+      <img alt="logo" id="tipsy" src="/svg/tipsylogowhite.svg" width="250">&reg;
         <p>
           A local bartending service based out of Los Angeles, Tipsy Bar provides open bar services for
           partys and special events. As a service based company they need a website that is able to inform the user about the type of services and experience they provide and while also being able to handle form requests from prospective clients.    
         </p>
-        <div class="btn"><a href="#">Website</a></div>
-        <div class="btn proj"><a href="#">GitHub</a></div>
+        <div class="btn"><a >Website coming soon!</a></div>
+        <div class="btn proj"><a target="_blank" href="https://github.com/vic-villicana/tipsy">GitHub Repo</a></div>
     </div> 
   </div>  
 </section>
@@ -30,18 +21,17 @@
       <p>
           Tipsy Bars main focus was to have a website that represented the brand well while also having the ability to process form data. With the main objective being to inform people of the services and handle form requests, this type of website is very straight forward to build, as no user has the need for dynamic content. Even with this in mind I decided to code all of the back-end myself instead relying on a third party.
       </p>
-        
     </div>
-    <img src="/img/tipsyscreenshot-development.jpg" height="275" width="500">
+    <img src="/img/tipsyscreentwo.png" height="275" width="500" alt="" data-aos="flip-down">
   </div>
   <div class="pro-info-container respo">    
-    <div class="img-container">
-      <img src="/img/tipsyscreenshot-development.jpg" alt="" height="160" width="260">
-      <img src="/img/tipsyscreenshot-development2.jpg" alt="" height="135" width="210">
-      <img src="/img/tipsyscreenshot-design2.jpg" alt="" height="110" width="85">
-      <img src="/img/tipsyscreenshot-design.jpg" alt="" height="510" width="285">
+    <div class="img-container" data-aos="fade-up">
+      <img src="/img/screentipsytwo.png" alt="" height="125" width="75">
+      <img src="/img/screentipsyone.png" alt="" height="135" width="210">
+      <img src="/img/tipsyscreentwo.png" alt="" height="160" width="260">      
+      <img src="/img/tipsyscreenone.png" alt="" height="510" width="285">
   </div>
-  <div class="bio-square bs-3">
+  <div class="bio-square bs-3" >
       <h2>Responsive For Every Device</h2>
       <p>
         One of the most important aspects of web design is being able to design a website to render well on a variety of devices, from the largest desktop screens to the small screens of any smartphone. Responsive design ensures the user has a consistent experience no matter what device they browse on.
@@ -54,13 +44,13 @@
   </div> 
   <div class=section-slider>
       <div class="info-container">
-          <div class="bio-square bs-4">
+          <div class="bio-square bs-4" data-aos="fade-right">
             <h2>Streamlined and To the Point</h2>
             <p>
                 Every Project I undertake is unique with its own purpose and goals. Here I highlight a quick break down of the main steps I took to develop the Tipsy Bar website.
             </p>
           </div>
-      <div class="slider-info">
+      <div class="slider-info" data-aos="fade-up">
         <div class="slide-info currant">
           <div class="content-info">
             <div class="void v2 v22">
@@ -72,11 +62,8 @@
                 </p>          
             </div>
             <div class="img-container-two">
-              <img src="/img/tipsyscreenshot-development.jpg" alt="" height="225" width="375"> 
-              <div class="img-container-two-c">
-                  <img src="/img/tipsyscreenshot-design.jpg" alt="" height="200" width="300">
-                  <img src="/img/tipsyscreenshot-design2.jpg" alt="" height="275" width="200">                
-              </div>  
+              <img src="/img/tipsyscreenshot-development.jpg" alt="" height="337" width="562"> 
+           
             </div>
           </div>
         </div>
@@ -90,11 +77,8 @@
                 </p>          
             </div>
             <div class="img-container-two">
-              <img src="/img/tipsyscreenshot-development.jpg" alt="" height="225" width="375"> 
-              <div class="img-container-two-c">
-                  <img src="/img/tipsyscreenshot-design.jpg" alt="" height="200" width="300">
-                  <img src="/img/tipsyscreenshot-design2.jpg" alt="" height="200" width="150">
-              </div>  
+              <img src="/img/tipsyscreenshot-development.jpg" alt="" height="337" width="562"> 
+              
             </div>
           </div>
         </div>
@@ -108,11 +92,8 @@
                 </p>          
             </div>
             <div class="img-container-two">
-                <img src="/img/tipsyscreenshot-development.jpg" alt="" height="225" width="375"> 
-                <div class="img-container-two-c">
-                    <img src="/img/tipsyscreenshot-design.jpg" alt="" height="200" width="300">
-                    <img src="/img/tipsyscreenshot-design2.jpg" alt="" height="200" width="150">
-                </div>  
+                <img src="/img/tipsyscreenshot-development.jpg" alt="" height="337" width="562"> 
+                
               </div>
           </div>
         </div>
@@ -120,46 +101,43 @@
           <div class="content-info">
             <div class="void v2 v22">
               <p>phase &mdash; <span>04</span></p>
-                <h1>Production/Deployment <br> Stage </h1>
+                <h1>Production<br>/Deployment <br> Stage </h1>
                 <p>
                     Once im comfortable with the funtionality of the site and everything is working properly, I start to ready my files for production. Using Webpack is crucial  for any project as it is able to package and distribute all of our files efficiently to be sent out to the browser. And once we have everything set up now  coms the moment of truth, now we are readdy too deploy our app!
                 </p>          
             </div>
             <div class="img-container-two">
-              <img src="/img/tipsyscreenshot-development.jpg" alt="" height="225" width="375"> 
-              <div class="img-container-two-c">
-                  <img src="/img/tipsyscreenshot-design.jpg" alt="" height="200" width="300">
-                  <img src="/img/tipsyscreenshot-design2.jpg" alt="" height="275" width="200">                
-              </div>  
+              <img src="/img/tipsyscreenshot-development.jpg" alt="" height="337" width="562"> 
+             
             </div>
           </div>
         </div>
       </div>
       <div class="buttons">
         <div class="butt" id="prev">    
-          <img src="/svg/ionicons-arrow-dropleft.svg" alt="" height="75" width="75">
+          <img src="/svg/ionicons-arrow-dropleft.svg" alt="left arrow" height="75" width="75">
         </div>
         <div class="butt" id="next">
-            <img src="/svg/ionicons-arrow-dropright.svg" alt="" height="75" width="75">
+            <img src="/svg/ionicons-arrow-dropright.svg" alt="right arrow" height="75" width="75">
         </div>
       </div>
         </div>
       </div>
-    
+      <div class="info-container">
+        <div class="bio-square bs-4" data-aos="fade-left">
+          <h2>Everything you need. <br> Nothing you don't.</h2>
+          <p>
+            Building the Tipsy Bars front end and back end made it more imperative that I only added the features we needed instead of  features that were non-essential and just take up processing power, so we can end up with a lightweight yet functional website.
+          </p>
+        </div>
+        <div class="fullpage" data-aos="flip-down">
+          <img  src="/img/tipsyscreenshot-development2.jpg" alt="" height="768" width="1024">
+        </div>
+        
+      </div>
 </section>
 
-<div class="info-container">
-  <div class="bio-square bs-4">
-    <h2>Everything you need. <br> Nothing you don't.</h2>
-    <p>
-      Building the Tipsy Bars front end and back end made it more imperative that I only added the features we needed instead of  features that were non-essential and just take up processing power, so we can end up with a lightweight yet functional website.
-    </p>
-  </div>
-  <div class="fullpage">
-    <img  src="/img/tipsyscreenshot-development2.jpg" alt="" height="768" width="1024">
-  </div>
-  
-</div>
 
-<% include partials/contact %>
+
+<% include partials/contactpage %>
 <% include partials/footer %>
