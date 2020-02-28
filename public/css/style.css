@@ -16,6 +16,7 @@ html{
 body{
   max-width:1920px;
   margin:0 auto;
+  overflow-x: hidden; 
 }
 
 
@@ -84,31 +85,6 @@ body{
   background:#3F4B3B;  
 }
 
-.error li{
-  color: rgb(216, 66, 66);
-  list-style:none;
-}
-
-.success li{
-  color: #5CAB7D;
-}
-
-.inc{
-  height:100%;
-  padding-bottom: 5em;
-}
-
-
-
-.pro-header{
-  position: relative;
-  height: 83vh;
-  background: url(/img/silhouette-photography-of-houses.jpg);
-  background-position-y: 94%;
-  background-size: cover;
-  width: 100%;
-}
-
 .hero-box{
   position:relative;
   padding:1em;
@@ -139,6 +115,8 @@ body{
   flex-direction:column;
   justify-content: center;
   align-items: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 .pip2{
@@ -169,12 +147,6 @@ body{
   color:#8fe7f7;
   font-size:1.25rem;
   padding:3em  0;
-}
-
-.title.pr{
-  color:rgb(231, 231, 231);
-  font-size:2.5rem;
-  margin: 0 auto;
 }
 
 .spacer{
@@ -419,21 +391,6 @@ body{
   }
 }
 
-.vs{
-  width: 42%;
-  animation:vs 2s;
-  animation-iteration-count: 3;
-}
-
-@keyframes vs{
-  0%{
-    width: 0%;
-  }
-  100%{
-    width:45%;
-  }
-}
-
 .xd{
   width: 70%;
   animation:xd 2s;
@@ -465,27 +422,6 @@ body{
 }
 
 /*---projjects section---*/
-
-.projects{
-  display:flex;
-  position:relative;
-  height:auto;
-  padding:5em 6em;
-}
-
-.oneq{
-  background:url(/img/black-samsung-tablet-computer.jpg);
-  background-position:center;
-  background-size:cover;
-  width:45%;
-  height:auto;
-  
-  
-}
-
-.pro{
-  width:55%;
-}
 
 /*---cnotact section----*/
 #profile{
@@ -527,14 +463,6 @@ body{
   text-decoration:none;
   color:white;
   font-size:200%
-}
-
-#fa{
-  font-size:300%;
-}
-
-.link{
-  text-align:center;
 }
 
 /*---cnotact section----*/
@@ -624,97 +552,6 @@ body{
 /*---slider--*//*---slider--*/
 /*---slider--*//*---slider--*/
 /*---slider--*//*---slider--*/
-.slider-section{
-  position:relative;
-  height:100%;
-  padding-top: 7em;
-  
-}
-
-
-.text-slider-wrapper{
-  width:1250px;
-  height:70vh;
-  margin: 0 auto;
-  overflow:hidden;
-}
-
-.text-slider{  
-  display:flex;
-  position:relative;
-  top:6%;
-  width:100%;
-  transition:all .5s ease;
-}
-
-.text-slide{
-  display: flex;
-  min-width:1250px;
-  position: relative;
-  z-index: 2;
-}
-
-
-.image-slider-wrapper{
-  position: absolute;
-  width:1250px;
-  overflow:hidden;
-  margin:0 auto;
-  right: 0px;
-  left: 0px;
-}
-
-.image-slider{
-  
-  display:flex;
-  width:100%;
-  transition:all .3s ease;
-}
-
-.image-slide{
-  min-width:1250px;
-  height: 19em;
-  z-index: 1;
-}
-
-.heading-slider-wrapper{
-  position: absolute;
-  width:1250px;
-  margin:0 auto;
-  right: 0px;
-  left: 0px;
-  overflow:hidden;
-}
-
-.heading-slider{
-  width:100%;
-  
-  display:flex;
-  transition:all .6s ease;
-}
-
-.heading-slide{
-  min-width:1250px;
-  z-index: 3;
-  padding:1em;
-}
-
-.heading-slide h1{
-  color:#4ADBC8;
-  font-size:2em;
-}
-
-.slide-control{
-  z-index: 4;
-  min-width:1000px;
-  height: 70vh;
-  position:absolute;
-  justify-content: flex-end;
-  right:15%;
-  display:flex;
-  margin:0 auto;
-  align-items:center;
-}
 
 #prev{
   cursor: pointer;
@@ -724,56 +561,7 @@ body{
   cursor: pointer;
 }
 
-button{
-  color:whitesmoke;
-  background:none;
-  padding:15px;
-  border-radius:50%;
-  margin:.5em;
-  font-size:15px;
-}
-
-.slide-container{
-  width:35em;
-  padding-right: 2em;
-  position: relative;
-  left:50%;
-}
-
-.slide-container p{
-  color: #5CAB7D;
-}
-
-.one{
-  background:black;
-  background-size:cover;
-  background-position:center;
-  width:35em;
-  height:100%;
-}
-
-.two{
-  background:rgb(219, 219, 219);
-  background-size:cover;
-  background-position:center;
-  width:35em;
-  height:100%;
-}
-
-.three{
-  background:rgb(216, 66, 66);
-  background-size:cover;
-  background-position:center;
-  width:35em;
-  height:100%;
-}
-
 /*--- portfolio ---*/
-.reach-me{
-  position:relative;
-  height:100%;
-  margin:5em 0;
-}
 
 
 
@@ -781,55 +569,6 @@ button{
 .title p{
   color: #c0fdf3;
   max-width: 800px;
-}
-
-
-.gitbox{
-  width: auto;
-  height: auto; 
-}
-
-.gitbox h3{
-  color: #c0fdf3;
-  display: block;
-}
-
-.gitbox p{
-  color: #8fe7f7;
-  display: block;
-}
-
-
-
-.gitpic{
-background-position:center;
-background-size:cover;
-width:100%;
-height:14em;
-margin:0 auto 1em auto;
-}
-
-.dribbox{
-  width: auto;
-  height: auto;
-}
-
-.dribbox h3{
-  color: #c0fdf3;
-  display: block;
-}
-
-.dribbox p{
-  color: #8fe7f7;
-  display: block;
-}
-
-.dribpic{
-  background-size:cover;
-  background-position:center;
-  width:auto;
-  height:14em;
-  margin:0 auto 1em auto;
 }
 
 
@@ -951,19 +690,6 @@ footer p{
   background:url(/img/red-lights-in-line-on-black-surface.jpg) no-repeat center center/cover;
 }
 
-.slider-p{
-  max-width:1250px;
-  padding: 2em 1em;
-  color:#8fe7f7;
-  margin: 0 auto;
-  margin-bottom: 5em;
-}
-
-.slider-p p{
-  color: #C5FFF5;
-  max-width: 800px;
-}
-
 
 /*---new projet page---*/
 .pro-three{
@@ -984,6 +710,12 @@ footer p{
 
 #tipsy{
   margin-bottom:1em;
+}
+
+.dzul-head{
+  background: url(/img/dzul-four.jpg);
+  background-position:center;
+  background-size:cover;
 }
 
 .void.v2{
@@ -1018,15 +750,6 @@ footer p{
   justify-content: space-around;
 }
 
-.pic-banner{
-  position: relative;
-  
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: auto;
-}
-
 .respo{
   
   justify-content: space-between;
@@ -1050,7 +773,7 @@ footer p{
 .pro-info img{
   position: relative;
   max-width: 600px;
-  
+  border: 1px solid #8fe7f7;
 }
 
 .fullpage img{
@@ -1076,34 +799,12 @@ footer p{
   height: auto;
   right: -600px;
   opacity: 0;
-  margin-top:2em;
-}
-
-.img-container-two-c{
-  display: flex;
-  flex-direction: row;
-  padding-top:1em;  
-  width: auto;
-}
-
-.img-container-two-c img{
-  padding-right: 1em;
-}
-
-.full-page img{
-  position: relative;
-  max-width: 90%;
-  height: 90%;
-  margin: 0 auto;    
+  margin-top:8em;
 }
 
 .info-container{
   position: relative;
   margin-bottom: 8em;
-}
-
-.info-container .pro-info-container{
-  padding: 2em 7em;
 }
 
 .bs-4{
@@ -1147,19 +848,19 @@ footer p{
 }
 
 .slide-info:first-child{
-  background: url(/img/city-buildings-and-trees-during-golden-hour.jpg);
+  background: url(/img/black-samsung-tablet-computer.jpg);
   background-position: center;
   background-size: cover;
 }
 
 .slide-info:nth-child(2){
-  background: url(/img/red-lights-in-line-on-black-surface.jpg);
+  background: url(/img/design.jpg);
   background-position: center;
   background-size: cover;
 }
 
 .slide-info:nth-child(3){
-  background: url(/img/black-samsung-tablet-computer.jpg);
+  background: url(/img/develop.jpg);
   background-position: center;
   background-size: cover;
 }
@@ -1184,6 +885,11 @@ footer p{
 
 .butt{
   color: #4ADBC8;
+  
+}
+
+.butt img{
+  border: none;
 }
 
 
@@ -1241,6 +947,11 @@ footer p{
   margin-bottom: 1em;
 }
 
+.error li {
+  color: rgb(216, 66, 66);
+  list-style: none;
+}
+
 .form{
   display: flex;
   flex-direction: row;
@@ -1273,55 +984,12 @@ footer p{
   font-size: 1rem;
 }
 
-.or{
-  position: absolute;
-  margin: 0 auto;
-  font-family:'Sedgwick Ave Display', cursive;
-  font-size: 2rem;
-  display: inline-block;
-  left: 50%;
-  top: 35%;
-  color: #B3001B;
-}
-
-#by{
-  font-family:'Sedgwick Ave Display', cursive;
-  color: #B3001B;
-}
-
 /*--incoming messages ---*/
-
-.square{
-  width: 66%;
-  background: rgb(168, 168, 168);
-  margin:2em auto;
-  border: 1px solid grey;
-  -webkit-box-shadow: 1px 3px 4px 5px rgba(19, 19, 19, 0.562);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  -moz-box-shadow:    1px 3px 4px 5px rgba(19, 19, 19, 0.562);  /* Firefox 3.5 - 3.6 */
-  box-shadow:         1px 2px 3px 4px rgba(19, 19, 19, 0.562);
-  padding: .5em;
-}
 
 
 /*--- register --*/
 
-.void.register{
-  position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
-}
-
 /*---project dzul----*/
-.dzul-head{
-  position: relative;
-  height: 85vh;
-  width: 100%;
-  background: url(/img/dzul-four.jpg);
-  background-position: center;
-  background-size: cover;
-  margin-top: 12em;
-}
 
 
 /*---media screen*/
@@ -1410,17 +1078,6 @@ footer p{
     display: block;
     z-index: 3;
     cursor: pointer;    
-  }
-
-  @keyframes navframes{
-    from{
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to{
-      opacity: 1;
-      transform: translateX(0px);
-    }
   }
 
   .toggle .line1{
@@ -1516,15 +1173,6 @@ footer p{
     margin-bottom: 4em;
   }
 
-  .pic-banner{
-    position: relative;
-    
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: auto;
-  }
-
   .respo{
     flex-direction: column;
   }
@@ -1571,17 +1219,6 @@ footer p{
     margin-top: 1em;
   }
 
-  .img-container-two-c{
-    display: flex;
-    flex-direction: row;
-    padding-top:1em;  
-    width: auto;
-  }
-
-  .img-container-two-c img{
-    padding-right: 1em;
-  }
-
   .img-container-two img{
     margin-bottom: 0;
   }
@@ -1590,10 +1227,6 @@ footer p{
     position: relative;
     margin-bottom: 8em;
     
-  }
-
-  .info-container .pro-info-container{
-    padding: 2em 7em;
   }
 
   .bs-4{
@@ -1647,16 +1280,24 @@ footer p{
   body{
     max-width:480px;
     margin:0 auto;
+    overflow-x: hidden; 
   }
 
   .logo{
     z-index: 3;
+    padding-left:2em;
   }
 
   .navbar{
-    padding: 2em 0;
+    padding: 1em 0;
     height: auto;
     background: #3F4B3B;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:4;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .nav-links{
@@ -1665,7 +1306,7 @@ footer p{
     background:linear-gradient(#3F4B3B,rgb(59, 65, 75),rgb(59, 65, 75));
     z-index: 2;
     width: 100%;
-    top: 12vh;
+    top: 10vh;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -1688,6 +1329,7 @@ footer p{
     display: block;
     z-index: 3;
     cursor: pointer;    
+    padding-right:2em;
   }
 
   @keyframes navframes{
@@ -1712,7 +1354,8 @@ footer p{
   }
 
   .pip{
-    top: 0;
+    top: 11%;
+    height:80%;
   }
 
   .title {
@@ -1735,6 +1378,11 @@ footer p{
     margin: 5em auto 5em auto;
     left:0%;
   }
+
+  .bio-square h2 {
+    
+    font-size: 1.75em;
+}
 
   .picture{
     background:url(/img/black-iphone-7.jpg);
@@ -1773,41 +1421,12 @@ footer p{
     margin-bottom: 1em;
   }
 
-  .gitbox{
-    text-align: center;
-    height: auto; 
-    padding-bottom: 4.5em;
-  }
-
-  .dribbox{
-    text-align: center;
-    height: auto;
-  }
-
-  .gitbox img{
-    width:35%;
-    color: #B3001B;
-  }
-  
-  .dribbox img{
-    width:35%;
-  }
-
-  .port-container{
-    max-width: 480px;
-    padding: 1em;
-    display: block;
-  }
-
   .proj {
     background: rgb(29, 29, 29);
     margin-top: 0;
+    margin-top: 1em;
   }
   
-  .contact{
-
-  }
-
   .contact-box {
     position: relative;
     margin: 0 auto;
@@ -1902,7 +1521,7 @@ footer p{
 
   .header-two{
     height:auto;
-    margin-top: 0em;
+    margin-top: 4em;
   }
 
   .void.v2{
@@ -1928,6 +1547,7 @@ footer p{
     width: 100%;
     display: flex;
     flex-direction:column;
+    overflow-x: hidden;
   }
 
   .pro-info-container{
@@ -1937,15 +1557,6 @@ footer p{
     flex-direction: column-reverse;
     justify-content: space-around;
     margin-bottom: 4em;
-  }
-
-  .pic-banner{
-    position: relative;
-    
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: auto;
   }
 
   .respo{
@@ -1991,18 +1602,7 @@ footer p{
     right: -796px;
     opacity: 0;
     width: 100%;
-    margin-top: 4em;
-  }
-
-  .img-container-two-c{
-    display: flex;
-    flex-direction: row;
-    padding-top:1em;  
-    width: auto;
-  }
-
-  .img-container-two-c img{
-    padding-right: 1em;
+    margin-top: 3em;
   }
 
   .img-container-two img{
@@ -2015,23 +1615,9 @@ footer p{
    
   }
 
-  .info-container .pro-info-container{
-    padding: 2em 7em;
-  }
-
   .bs-4{
     max-width: 100%;
     margin:3em 1em ;
-  }
-
-  .full-screen-img{
-    position: relative;
-    max-width: 1100px;
-    height: 275px;
-    margin: 0 auto;
-    background: url(/img/tipsyscreenshot-development2.jpg);
-    background-position: center;
-    background-size: cover;
   }
 
  /*------------projects page----------*/
@@ -2059,9 +1645,17 @@ footer p{
     height: auto;
   }
 
-  .buttons {
+  .the-slider .buttons {
     position: absolute;
     bottom: 10%;
+    right: 10%;
+    left:0%;
+    outline: none;
+    display: flex;
+  }
+  .buttons {
+    position: absolute;
+    bottom: 0%;
     right: 10%;
     left:0%;
     outline: none;
@@ -2090,4 +1684,3 @@ footer p{
   }
 
 } 
-
