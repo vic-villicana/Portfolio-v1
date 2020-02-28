@@ -121,8 +121,8 @@ body{
 
 .pip2{
   position:relative;
-  background: url(/img/city-buildings-and-trees-during-golden-hour.jpg);
-  background-position:center;
+  background: url(/img/silhouette-photography-of-houses.jpg);
+  background-position:bottom;
   background-size:cover;
   width:100%;
   height:auto;
@@ -196,8 +196,8 @@ body{
 }
 
 .picture{
-  background:url(/img/black-iphone-7.jpg);
-  background-position:center;
+  background:url(/img/portfolio-pic.jpg);
+  background-position:top;
   background-size:cover;
   width:40%;
   height: auto;
@@ -205,6 +205,7 @@ body{
 
 .skill-section{
   background:rgb(59, 65, 75);
+  padding-top:6em;
 }
 
 .skills{
@@ -245,7 +246,7 @@ body{
 }
 
 .list{
-  padding-bottom:1.5em;
+  padding: 1.5em 0;
 }
 
 /*---projjects section---*/
@@ -302,7 +303,7 @@ body{
 }
 
 .css{
-  width: 60%;
+  width: 75%;
   animation:css 2s;
   animation-iteration-count: 3;
 }
@@ -312,12 +313,12 @@ body{
     width: 0%;
   }
   100%{
-    width:60%;
+    width:75%;
   }
 }
 
 .responsive{
-  width: 60%;
+  width: 75%;
   animation:res 2s;
   animation-iteration-count: 3;
 }
@@ -327,7 +328,7 @@ body{
     width: 0%;
   }
   100%{
-    width:60%;
+    width:75%;
   }
 }
 
@@ -347,7 +348,7 @@ body{
 }
 
 .node{
-  width:60%;
+  width:50%;
   animation:node 2s;
   animation-iteration-count: 3;
 }
@@ -357,27 +358,14 @@ body{
     width: 0%;
   }
   100%{
-    width:60%;
-  }
-}
-
-.bigo{
-  width: 50%;
-  animation:big 2s;
-  animation-iteration-count: 3;
-}
-
-@keyframes big{
-  0%{
-    width: 0%;
-  }
-  100%{
     width:50%;
   }
 }
 
+
+
 .git{
-  width: 60%;
+  width: 70%;
   animation:git 2s;
   animation-iteration-count: 3;
 }
@@ -387,7 +375,7 @@ body{
     width: 0%;
   }
   100%{
-    width:60%;
+    width:70%;
   }
 }
 
@@ -1385,7 +1373,7 @@ footer p{
 }
 
   .picture{
-    background:url(/img/black-iphone-7.jpg);
+    background:url(/img/portfolio-pic.jpg);
     background-position:center;
     background-size:cover;
     width:100%;
@@ -1473,7 +1461,7 @@ footer p{
 
   .pip2{
     position:relative;
-    background: url(/img/city-buildings-and-trees-during-golden-hour.jpg);
+    background: url(/img/silhouette-photography-of-houses.jpg);
     background-position:center;
     background-size:cover;
     width:100%;
