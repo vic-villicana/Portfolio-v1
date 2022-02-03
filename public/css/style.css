@@ -19,7 +19,9 @@ body{
   overflow-x: hidden; 
 }
 
-
+h1, h2{
+  text-transform: capitalize;
+}
 /*---buttons---*/
 .btn{
   display: inline-block;
@@ -85,6 +87,13 @@ body{
   background:#3F4B3B;  
 }
 
+
+.centered{
+  display: flex;
+  justify-content: center;
+  position:relative;
+  top:14%;
+}
 .hero-box{
   position:relative;
   padding:1em;
@@ -146,7 +155,7 @@ body{
   margin: 0 auto;
   color:#8fe7f7;
   font-size:1.25rem;
-  padding:3em  0;
+  padding:3em  0 1.5em .5em;
 }
 
 .spacer{
@@ -189,6 +198,10 @@ body{
   /*color: #5CAB7D;*/
   /*color: #8fe7f7;*/
   color: #C5FFF5;
+}
+
+.certified{
+  margin-top: 1.5em;
 }
 
 .specialty{
@@ -247,6 +260,7 @@ body{
 
 .list{
   padding: 1.5em 0;
+  text-transform: capitalize;
 }
 
 /*---projjects section---*/
@@ -608,7 +622,7 @@ footer p{
   position: relative;
   overflow: hidden;
   height:35em;
-  max-width:1250px;
+  max-width:1350px;
   margin: 0 auto;
 }
 
@@ -628,7 +642,7 @@ footer p{
 
 .slide .content{
   position: absolute;
-  bottom: 125px;
+  bottom: 141px;
   left: -450px;
   max-width: 450px;
   opacity: 0;
@@ -672,10 +686,10 @@ footer p{
   background:url(/img/bar-bartender.jpg) no-repeat center center/cover;
 }
 .slide:nth-child(2) {
-  background:url(/img/dzul-four.jpg) no-repeat center center/cover;
+  background:url(/img/sign.jpg) no-repeat center center/cover;
 }
 .slide:nth-child(3) {
-  background:url(/img/red-lights-in-line-on-black-surface.jpg) no-repeat center center/cover;
+  background:url(/img/dzul-four.jpg) no-repeat center center/cover;
 }
 
 
@@ -702,6 +716,11 @@ footer p{
 
 .dzul-head{
   background: url(/img/dzul-four.jpg);
+  background-position:center;
+  background-size:cover;
+}
+.juice-head{
+  background: url(/img/sign.jpg);
   background-position:center;
   background-size:cover;
 }
@@ -745,7 +764,7 @@ footer p{
 
 .bs-2{
   position: relative;
-  max-width: 450px;
+  max-width: 600px;
   margin: 0;
 }
 
@@ -770,6 +789,12 @@ footer p{
   height: 90%;
   transform: translate(-50%, 0%);
   left: 50%;
+}
+
+.fill{
+  height:50px;
+  width:200px; 
+  background:none;
 }
 
 .img-container{
@@ -914,7 +939,7 @@ footer p{
 
 .void h1  {
   color:#8fe7f7; /*#c0fdf3;*/
-  padding-bottom: .5em;
+ 
 }
 
 .void p{
@@ -1010,9 +1035,15 @@ footer p{
     opacity: 0;
   }
 
+  .bs-5 {
+    width: 56%;
+    margin: 0;
+    height: auto;
+    transform: translate(0, 50%);
+  }
 
   .bs-3 {
-    transform: translate(0, 120%);
+    
     position: absolute;
     /* max-width: 650px; */
     width: 56%;
@@ -1256,7 +1287,6 @@ footer p{
 
   .buttons {
     position: absolute;
-    bottom: 0%;
     outline: none;
     display: flex;
   }
@@ -1362,7 +1392,7 @@ footer p{
   }
 
   .bio-square {
-    max-width: 75%;
+    max-width: 85%;
     margin: 5em auto 5em auto;
     left:0%;
   }
@@ -1565,12 +1595,17 @@ footer p{
     height: auto;
   }
 
+  .bs-5{
+    max-width: 650px;
+
+  }
+
   .pro-info img{
     position: relative;
     max-width: 100%;
     height: 90%;
     
-    margin-bottom: 1.5em;
+    margin-bottom: 2.5em;
   }
 
   .img-container{
@@ -1614,8 +1649,15 @@ footer p{
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 46em;
+    height: 36em;
   }
+
+ 
+
+  .small-slider{
+    height:36em
+  }
+
   .slide-info {
     padding: 3em 2em;
     position: absolute;

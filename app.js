@@ -12,19 +12,20 @@ const express = require("express"),
       passport = require('passport'),
       localStrategy = require('passport-local'),
       flash = require("connect-flash"),
-      User = require('./models/users.js'),
-      message = require("./models/messages");
+ 
+      createMessage = require('./public/js/createMessages.js')
 
 
 app.use(compression());
 app.use(helmet());
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+app.use(express.static("dist"));
 app.use(bodyParser.urlencoded({extended:true}));
 
-mongoose.set('useCreateIndex', true);
-mongoose.set('useUnifiedTopology', true);
-mongoose.connect("mongodb://localhost/portfolio", {useNewUrlParser:true});
+// mongoose.set('useCreateIndex', true);
+// mongoose.set('useUnifiedTopology', true);
+// mongoose.connect("mongodb://localhost/portfolio", {useNewUrlParser:true});
 
 //passport authentication
 app.use(require("express-session")({
@@ -39,11 +40,11 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.use(passport.initialize());
-app.use(passport.session());
-passport.use(new localStrategy(User.authenticate()));
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
+// app.use(passport.initialize());
+// app.use(passport.session());
+// passport.use(new localStrategy(User.authenticate()));
+// passport.serializeUser(User.serializeUser());
+// passport.deserializeUser(User.deserializeUser());
 
 
 app.get("/", (req, res)=>{
@@ -58,8 +59,8 @@ app.get("/projectdzul", (req,res)=>{
   res.render("projectdzul");
 })
 
-app.get("/projectthree", (req, res)=>{
-  res.render("projectthree");
+app.get("/projectjuicy", (req, res)=>{
+  res.render("projectjuicy");
 });
 
 app.get("/contact", (req, res)=>{
@@ -87,7 +88,7 @@ app.post("/incoming", [
   check('message').not().isEmpty(),
   ], 
   (req,res)=>{  
-  console.log(req.body);
+  
   const error = validationResult(req);
     if(!error.isEmpty()){
       req.flash("error", "please input info in right format")
@@ -95,15 +96,17 @@ app.post("/incoming", [
     }else{
       let name = req.body.name;
       let email = req.body.email;
-      let letter = req.body.message;
-      let newMessage = {name:name, email:email, message:letter};
-      message.create(newMessage, (err, newCreated)=>{
-        if(err){
-          debug('post error:' + err);
-        }else {
-        res.redirect("/thankyou");
-        }
-      });
+      let message = req.body.message;
+      let newMessage = {name, email, message};
+      createMessage(newMessage)
+      // message.create(newMessage, (err, newCreated)=>{
+      //   if(err){
+      //     debug('post error:' + err);
+      //   }else {
+      //     res.redirect("/thankyou");
+      //   }
+      // });
+      
     }  
 });
 
@@ -159,13 +162,16 @@ function isloggedIn(req,res, next){
   res.redirect("/login")
 }
 
-let options = {
-  key: fs.readFileSync('./key.pem'),
-  cert: fs.readFileSync('./cert.pem'),
-  passphrase: "shlemmies",
-}
+// let options = {
+//   key: fs.readFileSync('./key.pem'),
+//   cert: fs.readFileSync('./cert.pem'),
+//   passphrase: "shlemmies",
+// }
 
-const port = process.env.PORT || 3000;
-https.createServer(options, app, (req, res)=>{
-  res.writeHead(200);
-}).listen(port);
+const Port = process.env.PORT || 8081;
+
+// https.createServer(options, app, (req, res)=>{
+//   res.writeHead(200);
+// })
+
+app.listen(Port);

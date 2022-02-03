@@ -1,0 +1,1 @@
+const {DynamoDBClient, PutItemCommand} = require("aws-sdk/client-dynamodb");
