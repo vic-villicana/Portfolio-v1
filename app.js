@@ -72,15 +72,7 @@ app.get("/thankyou", (req,res)=>{
   
 })
 
-app.get("/incoming", isloggedIn, (req, res)=>{
-  message.find({}, (err, newMessages)=>{
-    if(err){
-      debug('display error:' + err);
-    }else{
-      res.render('incoming', {messages:newMessages})
-    }
-  });
-});
+
 
 app.post("/incoming", [
   check('name', 'name must have more than 3 characters').not().isEmpty().isLength({min:3}).trim().escape(),
@@ -110,6 +102,7 @@ app.post("/incoming", [
     }  
 });
 
+
 app.get("/incoming/:id", (req, res)=>{
   message.findById(req.params.id, (err, foundMessage)=>{
     if(err){
@@ -121,6 +114,15 @@ app.get("/incoming/:id", (req, res)=>{
   })
 })
 
+app.get("/incoming", isloggedIn, (req, res)=>{
+  message.find({}, (err, newMessages)=>{
+    if(err){
+      debug('display error:' + err);
+    }else{
+      res.render('incoming', {messages:newMessages})
+    }
+  });
+});
 //auth routes
 app.get("/register", (req, res)=>{
   res.render("register");
