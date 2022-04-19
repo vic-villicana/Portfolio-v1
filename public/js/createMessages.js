@@ -11,21 +11,20 @@ const createMessage = async (args) => {
         TableName: process.env.STARTUP_MESSAGE_TABLE || "",
         Item: marshall({
             content: args,
-            createdAt:Date.now().toString()
+
         })
     }
 
-    console.log(item)
-    console.log(data)
+   
 
     try{
         const client = new DynamoDBClient({region: "us-west-2"})
         const command = new PutItemCommand(params)
-        await client.send(command)
-        
+        const response = await client.send(command)
+        console.log(response)
     } catch(e){
         console.log('errr:' + e)
-        debug('Post Error:' + e)
+        // debug('Post Error:' + e)
     }
 }
 
