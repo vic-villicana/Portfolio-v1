@@ -9,7 +9,6 @@
     "popstart": "node ./node_modules/pm2/bin/pm2 logs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-
   "author": "Vic Villicana",
   "license": "ISC",
   "dependencies": {
@@ -27,6 +26,7 @@
     "helmet": "^3.21.2",
     "jquery": "^3.4.1",
     "jsdom": "^15.2.1",
+    "mongodb": "^4.10.0",
     "mongoose": "^5.7.12",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
